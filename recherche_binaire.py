@@ -1,12 +1,12 @@
-def recherche_binaire(arr, x):
-    l = 0
-    r = len(arr) - 1
-    while l <= r:
-        mid = l + (r - l) // 2
-        if arr[mid] == x:
-            return mid
-        elif arr[mid] < x:
-            l = mid + 1
+def recherche_binaire(arr, valeur):
+    debut = 0
+    fin = len(arr) - 1
+    while debut <= fin:
+        milieu = debut + (fin - debut) // 2
+        if arr[milieu] == valeur:
+            return milieu
+        elif arr[milieu] < valeur:
+            debut = milieu + 1
         else:
-            r = mid - 1
+            fin = milieu - 1
     return -1
